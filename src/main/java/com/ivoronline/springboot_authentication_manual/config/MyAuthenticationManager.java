@@ -34,10 +34,10 @@ public class MyAuthenticationManager implements AuthenticationManager {
                              authorities.add(new SimpleGrantedAuthority(role));
 
       //CREATE VALIDATED AUTHENTICATION
-      Authentication validatedAuthentication = new UsernamePasswordAuthenticationToken(username,password,authorities);
+      Authentication validatedAuth = new UsernamePasswordAuthenticationToken(username,password,authorities);
 
       //RETURN VALIDATES AUTHENTICATION
-      return validatedAuthentication;
+      return validatedAuth;
 
     }
 
