@@ -30,7 +30,8 @@ public class MyController {
     SecurityContextHolder.getContext().setAuthentication(returnedAuth);
 
     //RETURN SOMETHING
-    return "User is Authenticated";
+    if(returnedAuth == null) { return "User is NOT Authenticated"; }
+    else                     { return "User is Authenticated";     }
 
   }
 
